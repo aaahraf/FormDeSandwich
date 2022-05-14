@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Resa</title>
+    <link rel="stylesheet" href="node_modules/bootswatch/dist/cyborg">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+
+<body>
+    <div class="alert alert-primary" role="alert">
+        <strong> Note :</strong> Le prix du sandiwtch est 4dt
+        <br>
+        <strong>Offre :</strong> Si vous depassez 10 sadiwtch vous aurez 10% de réduction !
+    </div>
+    <form action="recap.php" method="post" enctype="multipart/form-data">
+        <div class="container">
+
+            <div class="row">
+                <div class="col">Nom
+                    <input type="text" class="form-control" name="nom" required>
+                </div>
+                <div class="col">Prénom
+                    <input type="text" class="form-control" name="prenom" required>
+                </div>
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="formGroupExampleInput">Combien de sandwitch?</label>
+                <input type="number" class="form-control" id="formGroupExampleInput" placeholder="Example input" name="nombre" required>
+            </div>
+            <br>
+
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1">Votre adresse</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="2" name="adresse" required></textarea>
+            </div>
+            <br>
+
+            <div class="form-group">
+                <label for="exampleFormControlSelect1">Sélectionner le type de votre sandwitch</label>
+                <select class="form-control" id="exampleFormControlSelect1" name="type" required>
+                <option selected>Choisir...</option>
+                <option>Viande</option>
+                <option>Poulet</option>
+                <option>Escalope</option>
+            </select>
+            </div>
+            <br> Et enfin ajouter des ingrédients !
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="harissa" name="ingredients[]">
+                <label class="form-check-label" for="inlineCheckbox1">harissa</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="salade" name="ingredients[]">
+                <label class="form-check-label" for="inlineCheckbox2">salade</label>
+            </div>
+
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="mayo" name="ingredients[]">
+                <label class="form-check-label" for="inlineCheckbox3">mayo</label>
+            </div>
+            <br>
+            <br>
+            <div class="custom-file">Rattachez votre CIN :
+                <input type="file" class="custom-file-input" id="customFile" name="cin">
+                <label class="custom-file-label" for="customFile"></label>
+            </div>
+            <br>
+            <button type="submit" class="btn btn-primary" name="valider">Valider</button>
+        </div>
+
+    </form>
+
+
+</body>
+
+</html>
